@@ -130,6 +130,12 @@ body {
     width: 42px;
     height: 42px;
 }
+.search svg rect {
+    transition: fill var(--trans);
+}
+.search:hover svg rect {
+    fill: #FF9900;
+}
 .search svg circle {
     transition: stroke var(--trans);
 }
@@ -492,7 +498,7 @@ body {
 }
 .question-item:hover {
     color: var(--colorOrange);
-    border-top: 2px solid var(--colorOrange);
+    border-top: 1px solid var(--colorOrange);
 }
 .question-item :hover .question-item__img {
     background-image: url("../img/x.svg");
@@ -579,25 +585,25 @@ body {
 .facebook {
     width: 60px;
     height: 60px;
-    background-image: url("../img/fb.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: transform var(--trans);
+    transition: fill var(--trans);
 }
-.facebook:hover {
-    transform: scale(0.95);
+.facebook svg path {
+    transition: fill var(--trans);
+}
+.facebook:hover svg path {
+    fill: white;
 }
 .vk {
     width: 60px;
     height: 60px;
     margin-left: 25px;
-    background-image: url("../img/vk.svg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    transition: transform var(--trans);
+    transition: fill var(--trans);
 }
-.vk:hover {
-    transform: scale(0.95);
+.vk svg path {
+    transition: fill var(--trans);
+}
+.vk:hover svg path {
+    fill: white;
 }
 .facebook__link {
     width: 60px;
@@ -610,10 +616,12 @@ body {
     background-image: url("../img/instagram.svg");
     background-size: cover;
     background-repeat: no-repeat;
-    transition: transform var(--trans);
 }
-.insta:hover {
-    transform: scale(0.95);
+.insta svg path {
+    transition: fill var(--trans);
+}
+.insta:hover svg path {
+    fill: white;
 }
 .footer-mid__tittle {
     margin: 0;
@@ -649,6 +657,9 @@ body {
     border: none;
 }
 .textarea {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 16px;
     margin-top: 25px;
     min-height: 150px;
     width: 570px;
@@ -658,6 +669,7 @@ body {
     background: #414141;
     outline: none;
     border: none;
+    resize: vertical;
 }
 .footer-form__btn__container {
     display: flex;
